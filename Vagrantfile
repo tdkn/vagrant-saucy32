@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = "saucy32"
 
   # Port forwarding
-  # config.vm.network :forwarded_port, guest: 80, host: 8080
+  config.vm.network :forwarded_port, guest: 80, host: 8080
 
   # Private network ip setting
   # config.vm.network :private_network, ip: "192.168.33.10"
@@ -35,10 +35,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Provider-specific configuration
   #
   config.vm.provider :virtualbox do |vb|
-    # Don't boot with headless mode
+    # true -> gui mode, false -> headless mode
     # vb.gui = true
 
-    # Use VBoxManage to customize the VM. For example to change memory:
+    # change memory size
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
