@@ -17,7 +17,7 @@ wget -q http://nginx.org/keys/nginx_signing.key -O- | apt-key add -
 #--------------------------------------------------
 apt-get update
 apt-get install -y \
-  aptitude curl git htop \
+  aptitude curl git htop iotop \
   nginx tmux vim xsel zsh
 
 # Change login shell
