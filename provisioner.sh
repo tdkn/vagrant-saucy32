@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CODENAME="saucy"
+CODENAME="$(lsb_release -cs)"
 
 # Add apt repository for Nginx
 #--------------------------------------------------
